@@ -1,0 +1,70 @@
+baseURL: https://david.gyttja.com
+languageCode: en-us
+title: "gyttja:david"
+theme: etch
+disableHugoGeneratorInject: true
+enableEmoji: false
+copyright: © 2010-2022
+description: Basic personal site theme styled with minimal tachyons, syntax
+  highlighting, and blog series configuration.
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  highlight:
+    codeFences: true
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false
+    style: native
+    tabWidth: 4
+  tableOfContents:
+    endLevel: 6
+    startLevel: 2
+
+taxonomies:
+  category: categories
+  series: series
+  tag: tags
+
+params:
+  titleEmoji: ":tada:"
+  highlight:
+    light: friendly
+    dark: native
+  twitter: dfuchslin
+
+menu:
+  main:
+  - identifier: posts
+    name: posts
+    url: /
+    weight: -120
+  - identifier: categories
+    name: categories
+    url: /categories/
+    weight: -110
+  - identifier: about
+    name: about
+    url: /about/
+    weight: -100
+
+Permalinks:
+  post: post/:slug

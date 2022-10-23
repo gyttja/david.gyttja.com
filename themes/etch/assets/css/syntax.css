@@ -1,0 +1,12 @@
+/*
+inspired by https://bwiggs.com/posts/2021-08-03-hugo-syntax-highlight-dark-light/
+chromostyles: https://xyproto.github.io/splash/docs/all.html
+*/
+@media (prefers-color-scheme: dark) {
+    {{ $path := print "./assets/css/chromostyles/" .Site.Params.highlight.dark ".css" }}
+    {{ (readFile $path) | safeCSS }}
+}
+@media (prefers-color-scheme: light) {
+    {{ $path := print "./assets/css/chromostyles/" .Site.Params.highlight.light ".css" }}
+    {{ (readFile $path) | safeCSS }}
+}

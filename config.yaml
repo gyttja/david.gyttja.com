@@ -35,6 +35,20 @@ markup:
     noClasses: false
     style: native
     tabWidth: 4
+
+  # highlight:
+  #   anchorLineNos: false
+  #   codeFences: true
+  #   guessSyntax: false
+  #   hl_Lines: ""
+  #   lineAnchors: ""
+  #   lineNoStart: ""
+  #   lineNos: false
+  #   lineNumbersInTable: false
+  #   noClasses: false
+  #   style: native
+  #   tabWidth: 4
+
   tableOfContents:
     endLevel: 6
     startLevel: 2

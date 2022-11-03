@@ -15,7 +15,7 @@ url: /2016/01/10/crashplan-eating-up-timemachine-backups/
 
 
 I recently upgraded to El Capitan and while checking the system logs I noticed lots of errors about not being able to delete old backups (thin backups), such as:
-```
+```plaintext
 2016-01-10 05:22:48,193 com.apple.backupd[5904]: Starting post-backup thinning
 2016-01-10 05:22:49,319 com.apple.backupd[5904]: Error: Error Domain=NSOSStatusErrorDomain Code=-36 "ioErr: I/O error (bummers)" deleting backup: /Volumes/Time Machine Backups/Backups.backupdb/fünke/2016-01-01-213437
 ...
@@ -24,7 +24,7 @@ and
 
 <!--more-->
 
-```
+```plaintext
 2016-01-10 05:22:45,791 com.apple.mtmd[208]: Failed to remove /.MobileBackups.trash, error: Error Domain=NSCocoaErrorDomain Code=513 "“.MobileBackups.trash” couldn’t be removed because you don’t have permission to access it." UserInfo={NSFilePath=/.MobileBackups.trash, NSUserStringVariant=(
 Remove
 ), NSUnderlyingError=0x7f9f02c3baf0 {Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted"}}

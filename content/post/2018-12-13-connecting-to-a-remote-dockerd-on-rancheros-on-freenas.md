@@ -19,7 +19,7 @@ Last summer I migrated from an old QNAP NAS to FreeNAS. I also started using doc
 
 <!--more-->
 
-### Expose docker in RancherOS
+## Expose docker in RancherOS
 
 To simplify life, copy your public ssh key to the RancherOS VM to enable passwordless login:
 ```bash
@@ -45,7 +45,7 @@ NAME               ACTIVE   DRIVER    STATE     URL                         SWAR
 rancheros-docker   *        generic   Running   tcp://<rancheros-ip>:2376           v17.09.1-ce
 ```
 
-### Use docker from RancherOS on localhost
+## Use docker from RancherOS on localhost
 
 Switch the docker context to the newly created docker machine configuration:
 
@@ -55,7 +55,7 @@ eval "$(docker-machine env rancheros-docker)"
 
 Now, any docker commands will be executed on the RancherOS docker, not localhost.
 
-### Reset docker on localhost back to defaults
+## Reset docker on localhost back to defaults
 
 To reset localhost back to normal (use the locally installed docker):
 

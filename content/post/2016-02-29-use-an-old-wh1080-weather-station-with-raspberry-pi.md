@@ -65,7 +65,7 @@ I tested both wfrog and weewx (both very capable weather loggers), but decided t
     sudo pywws-testweatherstation
     ```
     You should get something like this:
-    ```
+    ```plaintext
     21:58:02:pywws.Logger:pywws version 15.12.0
     0000 55 aa ff ff ff ff ff ff ff ff ff ff ff ff ff ff 1e 20 02 33 09 00 00 00 01 00 00 63 00 00 20 07
     0020 3e 28 ca 27 00 00 00 00 00 00 00 16 02 29 21 57 41 23 c8 00 00 00 46 2d 2c 01 64 80 c8 00 00 00

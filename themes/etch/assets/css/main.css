@@ -341,8 +341,9 @@ footer#footer {
   font-size: 14px;
   font-size: 1.4rem;
   font-weight: 400;
-  color: #b3b3b3;
+  /* color: #b3b3b3; */
   margin: 40px 0;
+  border-top: 1px solid #333333;
 }
 
 main#content table,

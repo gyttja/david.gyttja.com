@@ -49,7 +49,11 @@ params:
   highlight:
     light: friendly
     dark: native
+  mastodon: https://hachyderm.io/@dfuchslin
   twitter: dfuchslin
+  github: dfuchslin
+  instagram: dfuchslin
+  copyright: 2022
 
 menu:
   main:

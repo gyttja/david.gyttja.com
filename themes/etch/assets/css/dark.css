@@ -59,7 +59,10 @@ main#content code:not([class]) {
 main#content table,
 main#content th,
 main#content td {
-  border-color:#404040;
+    border-color:#404040;
+}
+footer#footer {
+    border-color:  #eaecef;
 }
 {{- if not (eq .Site.Params.dark "on") -}}
 }

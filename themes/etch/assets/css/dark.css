@@ -56,6 +56,11 @@ main#content code:not([class]) {
     color: #d0d0d0;
     background-color: #404040;
 }
+main#content table,
+main#content th,
+main#content td {
+  border-color:#404040;
+}
 {{- if not (eq .Site.Params.dark "on") -}}
 }
 {{- end -}}

@@ -344,3 +344,15 @@ footer#footer {
   color: #b3b3b3;
   margin: 40px 0;
 }
+
+main#content table,
+main#content th,
+main#content td {
+  border: 0.25px solid #e6e6e6;
+  border-collapse: collapse;
+}
+
+main#content th,
+main#content td {
+  padding: 0.25em;
+}

@@ -29,6 +29,8 @@ hugo --minify --baseURL "$BASE_URL"
 
 And configured the following variables, setting the `BASE_URL` based on production vs preview:
 
+<div style="overflow-x:auto;">
+
 | name           | value                      | environment |
 | :------------- | :------------------------- | :---------- |
 | `BASE_URL`     | `https://david.gyttja.com` | production  |
@@ -36,6 +38,7 @@ And configured the following variables, setting the `BASE_URL` based on producti
 | `BASE_URL`     | `$CF_PAGES_URL`            | preview     |
 | `HUGO_VERSION` | `0.106.0`                  | preview     |
 
+</div>
 
 
 ## Cloudflare DNS

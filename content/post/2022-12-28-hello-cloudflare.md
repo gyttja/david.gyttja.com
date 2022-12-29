@@ -31,12 +31,12 @@ And configured the following variables, setting the `BASE_URL` based on producti
 
 <div style="overflow-x:auto;">
 
-| name           | value                      | environment |
-| :------------- | :------------------------- | :---------- |
-| `BASE_URL`     | `https://david.gyttja.com` | production  |
-| `HUGO_VERSION` | `0.106.0`                  | production  |
-| `BASE_URL`     | `$CF_PAGES_URL`            | preview     |
-| `HUGO_VERSION` | `0.106.0`                  | preview     |
+| name         | value                    | environment |
+| :----------- | :----------------------- | :---------- |
+| BASE_URL     | https://david.gyttja.com | production  |
+| HUGO_VERSION | 0.109.0                  | production  |
+| BASE_URL     | $CF_PAGES_URL            | preview     |
+| HUGO_VERSION | 0.109.0                  | preview     |
 
 </div>
 

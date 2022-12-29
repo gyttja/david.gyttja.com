@@ -1,3 +1,8 @@
+:root {
+  --color-gray: #828282;
+  --color-near-black: #313a3d;
+}
+
 *,
 *:before,
 *:after {
@@ -13,7 +18,7 @@ body {
   font-size: 1.6rem;
   /* font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #313a3d;
+  color: var(--color-near-black);
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
@@ -25,11 +30,12 @@ header#banner {
   margin: 25px 0px 50px 0px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #333333;
+  /* border-bottom: 1px solid #333333; */
+  border-bottom: 1px solid var(--color-gray);
 }
 
 header#banner a {
-  color: #313a3d;
+  color: var(--color-near-black);
   text-decoration: none;
 }
 
@@ -355,7 +361,7 @@ svg.svg-icon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
-  color: #828282;
+  color: var(--color-gray);
 }
 
 footer#footer {
@@ -364,7 +370,7 @@ footer#footer {
   font-weight: 400;
   /* color: #b3b3b3; */
   margin: 40px 0;
-  border-top: 1px solid #828282;
+  border-top: 1px solid var(--color-gray);
   display: flex;
   justify-content: space-between;
 }
@@ -386,5 +392,5 @@ footer#footer nav ul li {
 }
 
 footer#footer nav ul li a {
-  color: #828282;
+  color: var(--color-gray);
 }

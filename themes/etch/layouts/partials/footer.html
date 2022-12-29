@@ -1,9 +1,11 @@
 <footer id="footer">
     © {{ .Site.Params.copyright }}
-    <div style="display:none;">
-        <a href="{{ .Site.Params.mastodon }}" rel="me">Mastodon</a>
-        <a href="https://github.com/{{ .Site.Params.github }}">Github</a>
-        <a href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a>
-        <a href="https://www.instagram.com/{{ .Site.Params.instagram }}/">Instagram</a>
-    </div>
+    <nav>
+        <ul>
+            {{ range .Site.Menus.social.ByWeight -}}
+            <li>{{ .Pre }}<a href="{{ .URL }}" title="{{ .Name }}"><svg viewBox="0 0 16 16"
+                        class="svg-icon">{{- partial (printf "icons/%s" .Identifier) . -}}</svg></a>{{ .Post }}</li>
+            {{- end }}
+        </ul>
+    </nav>
 </footer>

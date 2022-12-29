@@ -49,7 +49,6 @@ params:
   highlight:
     light: friendly
     dark: native
-  mastodon: https://hachyderm.io/@dfuchslin
   twitter: dfuchslin
   github: dfuchslin
   instagram: dfuchslin
@@ -69,6 +68,25 @@ menu:
     name: about
     url: /about/
     weight: -100
+  social:
+  - identifier: mastodon
+    name: Mastodon
+    url: https://hachyderm.io/@dfuchslin
+    weight: -200
+    rel: me
+  - identifier: github
+    name: GitHub
+    url: https://github.com/dfuchslin
+    weight: -190
+  - identifier: instagram
+    name: Instagram
+    url: https://www.instagram.com/dfuchslin/
+    weight: -180
+  - identifier: twitter
+    name: Twitter
+    url: https://twitter.com/dfuchslin
+    weight: -170
+
 
 Permalinks:
   post: post/:slug

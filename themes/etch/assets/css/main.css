@@ -337,15 +337,6 @@ main#content .footnotes {
   font-size: 0.9em;
 }
 
-footer#footer {
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: 400;
-  /* color: #b3b3b3; */
-  margin: 40px 0;
-  border-top: 1px solid #333333;
-}
-
 main#content table,
 main#content th,
 main#content td {
@@ -356,4 +347,44 @@ main#content td {
 main#content th,
 main#content td {
   padding: 0.25em;
+}
+
+svg.svg-icon {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+  color: #828282;
+}
+
+footer#footer {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  /* color: #b3b3b3; */
+  margin: 40px 0;
+  border-top: 1px solid #333333;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer#footer nav {
+  display: inline-block;
+  margin-top: 0.5em;
+}
+
+footer#footer nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer#footer nav ul li {
+  display: inline;
+  margin: 0 0.5em;
+}
+
+footer#footer nav ul li a {
+  color: #454545;
 }

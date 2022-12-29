@@ -3,7 +3,8 @@
     <nav>
         <ul>
             {{ range .Site.Menus.social.ByWeight -}}
-            <li>{{ .Pre }}<a href="{{ .URL }}" title="{{ .Name }}"><svg viewBox="0 0 16 16"
+            <li>{{ .Pre }}<a href="{{ .URL }}" title="{{ .Name }}" target="_blank" rel="nofollow noopener me"><svg
+                        viewBox="0 0 16 16"
                         class="svg-icon">{{- partial (printf "icons/%s" .Identifier) . -}}</svg></a>{{ .Post }}</li>
             {{- end }}
         </ul>

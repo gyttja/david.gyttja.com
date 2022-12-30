@@ -8,6 +8,11 @@
     font-size: 1.8rem;
   }
 
+  main#content ul#posts small {
+    display: inline;
+    margin: 0 0px 1em 0.5em;
+  }
+
   /* single.html styles */
   main#content pre {
     padding: 1.5rem 2.2rem;

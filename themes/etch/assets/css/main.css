@@ -174,14 +174,16 @@ main#content ul#posts {
 }
 
 main#content ul#posts li {
-  margin: 5px 0;
+  margin: 1em 0;
   padding: 0;
+  line-height: normal;
 }
 
 main#content ul#posts small {
   font-size: 0.8em;
   color: #767676;
-  margin-left: 10px;
+  display: block;
+  margin: 0 0px 1em 0;
 }
 
 main#content ul#posts li a {

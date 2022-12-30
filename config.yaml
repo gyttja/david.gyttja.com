@@ -84,10 +84,14 @@ menu:
     name: Twitter
     url: https://twitter.com/dfuchslin
     weight: -170
+  - identifier: linkedin
+    name: LinkedIn
+    url: https://se.linkedin.com/in/dfuchslin
+    weight: -160
   - identifier: rss
     name: RSS
     url: https://david.gyttja.com/index.xml
-    weight: -160
+    weight: -150
 
 
 Permalinks:

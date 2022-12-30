@@ -66,7 +66,7 @@ menu:
   - identifier: qhn
     name: qhn
     url: https://quiethn.gyttja.com/
-    weight: -90
+    weight: -105
   social:
   - identifier: mastodon
     name: Mastodon

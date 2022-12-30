@@ -1,6 +1,6 @@
 baseURL: https://david.gyttja.com
 languageCode: en-us
-title: david
+title: gyttja
 theme: etch
 disableHugoGeneratorInject: true
 enableEmoji: false

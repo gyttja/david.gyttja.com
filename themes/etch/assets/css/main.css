@@ -1,7 +1,20 @@
 :root {
+  --color-gray20: #e6e6e6;
   --color-gray: #828282;
   --color-near-black: #313a3d;
-  --color-background: white;
+  --color-off-white: #ebebeb;
+  --color-near-black: #313a3d;
+  --color-almost-black: #121212;
+
+  --background-color: white;
+  --text-color: var(--color-near-black);
+  --body-text-color: var(--color-near-black);
+  --header-border-color: var(--color-gray);
+  --header-links-color: var(--color-near-black);
+  --footer-border-color: var(--color-gray);
+  --footer-links-color: var(--color-gray);
+  --hr-color: var(--color-gray);
+  --table-border-color: var(--color-gray20);
 }
 
 *,
@@ -19,8 +32,8 @@ body {
   font-size: 1.6rem;
   /* font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: var(--color-near-black);
-  background: var(--color-background);
+  color: var(--text-color);
+  background: var(--background-color);
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
@@ -32,12 +45,11 @@ header#banner {
   margin: 25px 0px 50px 0px;
   display: flex;
   justify-content: space-between;
-  /* border-bottom: 1px solid #333333; */
-  border-bottom: 1px solid var(--color-gray);
+  border-bottom: 1px solid var(--header-border-color);
 }
 
 header#banner a {
-  color: var(--color-near-black);
+  color: var(--header-links-color);
   text-decoration: none;
 }
 
@@ -56,30 +68,6 @@ header#banner h2 {
   line-height: 0.9em;
 }
 
-/* main nav */
-header#banner nav {
-  display: inline-block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-header#banner nav ul {
-  list-style-type: none;
-  font-size: 1.05em;
-  text-transform: lowercase;
-  margin: 0;
-  padding: 0;
-}
-
-header#banner nav ul li {
-  /* display: inline; */
-  margin: 0 3px;
-}
-
-header#banner nav ul li a {
-  color: #454545;
-}
-
 /* Mobile Nav menu */
 header#banner div#main-nav {
   display: flex;
@@ -90,6 +78,8 @@ header#banner nav {
   display: none;
   overflow: hidden;
   text-align: left;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
   max-height: 0;
   transition: max-height 0.1 ease-out;
 }
@@ -103,11 +93,8 @@ header#banner nav ul {
 header#banner nav ul li {
   margin: 0 3px;
 }
-header#banner nav ul li a {
-  color: #454545;
-}
 header#banner nav a {
-  color: var(--color-near-black);
+  color: var(--header-links-color);
   text-decoration: none;
 }
 header#banner nav a:hover {
@@ -163,14 +150,14 @@ main#content .time {
 }
 
 main#content p {
-  color: #394548;
+  color: var(--body-text-color);
   margin: 16px 0;
 }
 
 main#content hr {
   height: 1px;
   border: 0;
-  background: #d8d8d8;
+  background: var(--hr-color);
 }
 
 main#content abbr {
@@ -246,9 +233,7 @@ main#content header#post-header h1 {
   display: block;
   font-size: 36px;
   font-size: 3.6rem;
-  padding-bottom: 0.3em;
   line-height: 1.15;
-  border-bottom: 1px solid #eaecef;
 }
 
 main#content header#post-header > div {
@@ -387,7 +372,7 @@ main#content .footnotes {
 main#content table,
 main#content th,
 main#content td {
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--table-border-color);
   border-collapse: collapse;
 }
 
@@ -402,16 +387,16 @@ svg.svg-icon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
-  color: var(--color-gray);
+  color: var(--footer-links-color);
 }
 
 footer#footer {
   font-size: 14px;
   font-size: 1.4rem;
   font-weight: 400;
-  color: var(--color-gray);
+  color: var(--footer-links-color);
   margin: 40px 0;
-  border-top: 1px solid var(--color-gray);
+  border-top: 1px solid var(--footer-border-color);
   display: flex;
   justify-content: space-between;
 }
@@ -433,7 +418,7 @@ footer#footer nav ul li {
 }
 
 footer#footer nav ul li a {
-  color: var(--color-gray);
+  color: var(--footer-links-color);
 }
 
 /* fuuuugly hamburger start
@@ -448,7 +433,7 @@ footer#footer nav ul li a {
 }
 
 .hamb-line {
-  background: var(--color-gray);
+  background: var(--header-border-color);
   display: block;
   height: 2px;
   position: relative;
@@ -456,7 +441,7 @@ footer#footer nav ul li a {
 }
 .hamb-line::before,
 .hamb-line::after {
-  background: var(--color-gray);
+  background: var(--header-border-color);
   content: '';
   display: block;
   height: 100%;

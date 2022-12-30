@@ -3,9 +3,17 @@
 {{ end -}}
 
 :root {
-    --color-gray: #828282;
-    --color-near-black: #313a3d;
-    --color-background: #121212;
+    --color-gray80: #cccccc;
+
+    --background-color: var(--color-almost-black);
+    --text-color: var(--color-off-white);
+    --body-text-color: var(--color-off-white);
+
+    --header-border-color: var(--color-gray);
+    --header-links-color: var(--color-gray80);
+    --footer-border-color: var(--color-gray);
+    --footer-links-color: var(--color-gray);
+    --table-border-color: var(--color-gray80);
 }
 
 html {
@@ -13,35 +21,12 @@ html {
 }
 
 body {
-    color: #ebebeb;
-    /* background: var(--color-background); */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-header#banner {
-    border-bottom: 1px solid #eaecef;
-}
-
-header#banner a {
-    color: #e0e0e0;
-    text-decoration: none;
-}
-
-header#banner nav ul li a {
-    color: #cccccc;
-}
-
 main#content a {
     color: #00b1ed;
-}
-
-main#content p {
-    color: #f5f5f5;
-}
-
-main#content hr {
-    background: #5c5c5c;
 }
 
 main#content #toc h4 {
@@ -68,9 +53,7 @@ main#content th,
 main#content td {
     border-color:#404040;
 }
-footer#footer {
-    border-color:  #eaecef;
-}
+
 {{- if not (eq .Site.Params.dark "on") -}}
 }
 {{- end -}}

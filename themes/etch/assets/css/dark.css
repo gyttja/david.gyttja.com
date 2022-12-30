@@ -1,13 +1,20 @@
 {{ if not (eq .Site.Params.dark "on") -}}
 @media (prefers-color-scheme: dark) {
 {{ end -}}
+
+:root {
+    --color-gray: #828282;
+    --color-near-black: #313a3d;
+    --color-background: #121212;
+}
+
 html {
     scrollbar-color: #6c6c6c #2e2e2e;
 }
 
 body {
     color: #ebebeb;
-    background: #121212;
+    /* background: var(--color-background); */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

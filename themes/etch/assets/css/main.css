@@ -1,6 +1,7 @@
 :root {
   --color-gray: #828282;
   --color-near-black: #313a3d;
+  --color-background: white;
 }
 
 *,
@@ -19,6 +20,7 @@ body {
   /* font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: var(--color-near-black);
+  background: var(--color-background);
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
@@ -48,15 +50,17 @@ header#banner h2 {
   display: inline;
   font-weight: 800;
   letter-spacing: -0.02em;
-  font-size: 36px;
-  font-size: 3.6rem;
+  font-size: 32px;
+  font-size: 3.2rem;
   margin: 0 8px 0 0;
   line-height: 0.9em;
 }
 
+/* main nav */
 header#banner nav {
   display: inline-block;
-  margin-top: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 header#banner nav ul {
@@ -68,13 +72,50 @@ header#banner nav ul {
 }
 
 header#banner nav ul li {
-  display: inline;
+  /* display: inline; */
   margin: 0 3px;
 }
 
 header#banner nav ul li a {
   color: #454545;
 }
+
+/* Mobile Nav menu */
+header#banner div#main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+header#banner nav {
+  display: none;
+  overflow: hidden;
+  text-align: left;
+  max-height: 0;
+  transition: max-height 0.1 ease-out;
+}
+header#banner nav ul {
+  list-style-type: none;
+  font-size: 1.05em;
+  text-transform: lowercase;
+  margin: 0;
+  padding: 0;
+}
+header#banner nav ul li {
+  margin: 0 3px;
+}
+header#banner nav ul li a {
+  color: #454545;
+}
+header#banner nav a {
+  color: var(--color-near-black);
+  text-decoration: none;
+}
+header#banner nav a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.125em;
+}
+
+/* main nav */
 
 main#content a {
   color: #007dfa;
@@ -368,7 +409,7 @@ footer#footer {
   font-size: 14px;
   font-size: 1.4rem;
   font-weight: 400;
-  /* color: #b3b3b3; */
+  color: var(--color-gray);
   margin: 40px 0;
   border-top: 1px solid var(--color-gray);
   display: flex;
@@ -394,3 +435,58 @@ footer#footer nav ul li {
 footer#footer nav ul li a {
   color: var(--color-gray);
 }
+
+/* fuuuugly hamburger start
+  https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/
+*/
+
+.hamb {
+  cursor: pointer;
+  float: right;
+  margin-top: 0.75em;
+  /* padding: 40px 20px; */
+}
+
+.hamb-line {
+  background: var(--color-gray);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+}
+.hamb-line::before,
+.hamb-line::after {
+  background: var(--color-gray);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.hamb-line::before {
+  top: 5px;
+}
+.hamb-line::after {
+  top: -5px;
+}
+
+.hamb-menu {
+  display: none;
+}
+.hamb-menu:checked ~ nav#main-menu-nav {
+  display: inline-block;
+  max-height: 100%;
+}
+.hamb-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.hamb-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.hamb-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+/* hamburger end */

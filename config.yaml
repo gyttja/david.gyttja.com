@@ -1,10 +1,9 @@
 baseURL: https://david.gyttja.com
 languageCode: en-us
-title: "gyttja"
+title: david
 theme: etch
 disableHugoGeneratorInject: true
 enableEmoji: false
-copyright: © 2010-2022
 description: Basic personal site theme styled with minimal tachyons, syntax
   highlighting, and blog series configuration.
 
@@ -45,14 +44,10 @@ taxonomies:
   tag: tags
 
 params:
-  titleEmoji: ":tada:"
   highlight:
     light: friendly
     dark: native
-  twitter: dfuchslin
-  github: dfuchslin
-  instagram: dfuchslin
-  copyright: 2022
+  copyright: © 2010-2022
 
 menu:
   main:
@@ -68,6 +63,10 @@ menu:
     name: about
     url: /about/
     weight: -100
+  - identifier: qhn
+    name: qhn
+    url: https://quiethn.gyttja.com/
+    weight: -90
   social:
   - identifier: mastodon
     name: Mastodon

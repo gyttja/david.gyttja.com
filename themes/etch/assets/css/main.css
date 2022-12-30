@@ -56,9 +56,11 @@ header#banner h2 {
   line-height: 0.9em;
 }
 
+/* main nav */
 header#banner nav {
   display: inline-block;
-  margin-top: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 header#banner nav ul {
@@ -70,13 +72,50 @@ header#banner nav ul {
 }
 
 header#banner nav ul li {
-  display: inline;
+  /* display: inline; */
   margin: 0 3px;
 }
 
 header#banner nav ul li a {
   color: #454545;
 }
+
+/* Mobile Nav menu */
+header#banner div#main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+header#banner nav {
+  display: none;
+  overflow: hidden;
+  text-align: left;
+  max-height: 0;
+  transition: max-height 0.1 ease-out;
+}
+header#banner nav ul {
+  list-style-type: none;
+  font-size: 1.05em;
+  text-transform: lowercase;
+  margin: 0;
+  padding: 0;
+}
+header#banner nav ul li {
+  margin: 0 3px;
+}
+header#banner nav ul li a {
+  color: #454545;
+}
+header#banner nav a {
+  color: var(--color-near-black);
+  text-decoration: none;
+}
+header#banner nav a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.125em;
+}
+
+/* main nav */
 
 main#content a {
   color: #007dfa;
@@ -401,42 +440,6 @@ footer#footer nav ul li a {
   https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/
 */
 
-/* Nav menu */
-nav#hamb-nav {
-  margin-top: -50px;
-  width: 100%;
-  height: 100%;
-  /* position: fixed; */
-  overflow: hidden;
-  text-align: right;
-  background-color: red;
-}
-/* nav#hamb-nav {
-  max-height: 0;
-  transition: max-height 0.5s ease-out;
-} */
-nav#hamb-nav ul {
-  list-style-type: none;
-  font-size: 1.05em;
-  text-transform: lowercase;
-  margin: 0;
-  padding: 0;
-}
-nav#hamb-nav ul li {
-  margin: 0 3px;
-}
-nav#hamb-nav ul li a {
-  color: #454545;
-}
-nav#hamb-nav a {
-  color: var(--color-near-black);
-  text-decoration: none;
-}
-nav#hamb-nav a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 0.125em;
-}
-
 .hamb {
   cursor: pointer;
   float: right;
@@ -471,9 +474,9 @@ nav#hamb-nav a:hover {
 .hamb-menu {
   display: none;
 }
-.hamb-menu:checked + .hamb-nav {
-  /* max-height: 100%; */
-  background-color: green;
+.hamb-menu:checked ~ nav#main-menu-nav {
+  display: inline-block;
+  max-height: 100%;
 }
 .hamb-menu:checked ~ .hamb .hamb-line {
   background: transparent;

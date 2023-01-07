@@ -16,7 +16,7 @@ My homelab server runs on a nice, oldish [Asrock Rack D1541D4U-2T8R](https://www
 
 <!--more-->
 
-JViewer itself is not all bad: it works, it does what it needs to do. Unfortunately, when I bought my new M1-based Mac a year ago JViewer stopped working completely. I couldn't open it. Not good. What I found out is that JViewer (for my Asrock Rack motherboard) must have Java 8, not newer, and must be of type x64 architecture, not aarch64 (Apple Silicon). [Openwebstart](https://openwebstart.com/) is a great solution for executing jnlp files, but no matter what I tried, I couldn't _force_ JViewer to use the JVM it needed, even when removing all other JVM configurations and only having a Rosetta-based x64-based JVM configured:
+JViewer itself is not all bad: it works, it does what it needs to do. Unfortunately, when I bought my new M1-based Macbook Pro a year ago JViewer stopped working completely. I couldn't open it. Not good. What I found out is that JViewer (for my Asrock Rack motherboard) must have Java 8, not newer, and must be of type x64 architecture, not aarch64 (Apple Silicon). [Openwebstart](https://openwebstart.com/) is a great solution for executing jnlp files, but no matter what I tried, I couldn't _force_ JViewer to use the JVM it needed, even when removing all other JVM configurations and only having a Rosetta-based x64-based JVM configured:
 
 ![Openwebstart failing to open JViewer, even with a x64 Java 8 JVM](/images/2023/01/jviewer-fail.png)
 

@@ -383,6 +383,34 @@ main#content td {
   padding: 0.25em;
 }
 
+/* about page nav */
+main#content nav#contact {
+  margin-top: 2em;
+}
+main#content nav#contact ul {
+  list-style-type: none;
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-top: 0;
+  padding: 0;
+}
+
+main#content nav#contact li {
+  margin: 0.25em 0;
+  padding: 0;
+  line-height: normal;
+}
+
+main#content nav#contact li a {
+  text-decoration: none;
+}
+
+main#content nav#contact .svg-icon {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+/* content footer */
 main#content footer {
   margin-top: 2em;
   border-top: 1px solid var(--table-border-color);

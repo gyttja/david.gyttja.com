@@ -80,13 +80,13 @@ menu:
     name: Instagram
     url: https://www.instagram.com/dfuchslin/
     weight: -180
-  - identifier: twitter
-    name: Twitter
-    url: https://twitter.com/dfuchslin
-    weight: -170
   - identifier: linkedin
     name: LinkedIn
     url: https://se.linkedin.com/in/dfuchslin
+    weight: -170
+  - identifier: twitter
+    name: Twitter
+    url: https://twitter.com/dfuchslin
     weight: -160
   - identifier: rss
     name: RSS

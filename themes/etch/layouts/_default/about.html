@@ -1,0 +1,43 @@
+{{ define "main" }}
+<article>
+    <header id="post-header">
+        <h1>{{ .Title }}</h1>
+        <div class="time">
+            {{- if isset .Params "date" -}}
+            {{ if eq .Lastmod .Date }}
+            <time>{{ .Date | time.Format (i18n "post.created") }}</time>
+            {{ else }}
+            <time>{{ .Lastmod | time.Format (i18n "post.updated") }}</time>
+            {{ end }}
+            {{- end -}}
+        </div>
+    </header>
+    {{- .Content -}}
+
+    <nav id="contact">
+        <h4>Other places to find me:</h4>
+        <ul>
+            {{ range .Site.Menus.social.ByWeight -}}
+            <li>
+                {{- .Pre -}}
+                <a href="{{ .URL }}" title="{{ .Name }}" target="_blank" rel="nofollow noopener me">
+                    <svg viewBox="0 0 20 20" class="svg-icon">{{- partial (printf "icons/%s" .Identifier) . -}}</svg>
+                    {{ .Name }}
+                </a>
+                {{- .Post -}}
+            </li>
+            {{- end }}
+        </ul>
+    </nav>
+
+    {{- if isset .Params "updated" -}}
+    <footer>
+        <ul>
+            {{ range $date, $text := .Params.updated -}}
+            <li>{{ $date | time.Format (i18n "post.updated") }}: {{ $text | markdownify }}</li>
+            {{- end }}
+        </ul>
+    </footer>
+    {{- end -}}
+</article>
+{{ end }}

@@ -9,9 +9,11 @@ tags:
   - cloudflare
 title: Quiet Hacker News on Cloudflare Pages
 url: /2022/12/30/quiet-hacker-news-on-cloudflare-pages/
+updated:
+  '2023-01-07': minor typos, readability
 ---
 
-I've been reading [Hacker News](https://news.ycombinator.com/) for years, but about four of five years ago a friend told me about (now defunct) ["quiet" hacker news](https://github.com/DylanGraham/quiet-hacker-news), a quick, unstyled, simple site showing the top Hacker News stories without commentary. Of course, commentary on HN is entertaining to read, but after trying quiethn, I found I liked to focus on the articles and instead buily my own opinion on what I read, for better or worse.
+I've been reading [Hacker News](https://news.ycombinator.com/) for years, but about four of five years ago a friend told me about (now defunct) ["quiet" hacker news](https://github.com/DylanGraham/quiet-hacker-news), a quiet, unstyled, simple site showing the top Hacker News stories without commentary. Of course, commentary on HN is entertaining to read, but after trying quiethn, I found I liked to focus on the articles and instead buily my own opinion on what I read, for better or worse.
 
 <!--more-->
 

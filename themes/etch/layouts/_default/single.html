@@ -13,5 +13,15 @@
         </div>
     </header>
     {{- .Content -}}
+
+    {{- if isset .Params "updated" -}}
+    <footer>
+        <ul>
+            {{ range $date, $text := .Params.updated -}}
+            <li>{{ $date | time.Format (i18n "post.updated") }}: {{ $text | markdownify }}</li>
+            {{- end }}
+        </ul>
+    </footer>
+    {{- end -}}
 </article>
 {{ end }}

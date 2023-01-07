@@ -10,6 +10,9 @@ tags:
   - weather
 title: Use an old WH1080 weather station with a raspberry pi
 url: /2016/02/29/use-an-old-wh1080-weather-station-with-raspberry-pi/
+updated:
+  '2016-03-01': minor typos, readability.
+
 ---
 
 
@@ -120,7 +123,3 @@ I tested both wfrog and weewx (both very capable weather loggers), but decided t
 ![wfrog report](/images/2016/02/wfrog.png)
 
 On a sidenote, now that I have graphs and historical sensor data, one interesting thing I noticed is that in the middle of the day, the temperature spikes up to nearly 15˚C, which it most definitely is not. We've had some very beautiful and sunny days these past few days in Stockholm, but not that warm... I think I'll have to move the temperature sensor out of the direct sunlight, and see if that helps prevent these spikes.
-
----
-
-_Updated 2016-03-01: minor typos, readability._

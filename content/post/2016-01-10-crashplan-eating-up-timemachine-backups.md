@@ -11,6 +11,9 @@ tags:
   - TimeMachine
 title: Crashplan eating up TimeMachine backups
 url: /2016/01/10/crashplan-eating-up-timemachine-backups/
+updated:
+  '2016-02-03': changed the find script to case-insensitive `-iname crashplan.app`.
+
 ---
 
 
@@ -63,7 +66,3 @@ And finally, add /Applications/CrashPlan.app to the excluded list for TimeMachin
 Done!
 
 After I did the above, I triggered a new TimeMachine backup, checked the logs, no more errors! And I checked my hard drive: I had now gained 18GB of space! TimeMachine was finally able to delete/trim the old unused Mobile Backups! :)
-
----
-
-_Update 2016-02-03: changed the find script to case-insensitive `-iname crashplan.app`._

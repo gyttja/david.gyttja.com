@@ -11,6 +11,9 @@ tags:
   - AirPrint
 title: AirPrint on Ubuntu
 url: /2010/11/11/airprint-on-ubuntu/
+updated:
+  '2010-11-21': repaired some mangled XML due to Wordpress's less-than-nice HTML-parsing
+  '2010-11-23': added post subtitle, added screenshot from iPhone
 ---
 
 
@@ -28,7 +31,7 @@ I don't have a new HP ePrint printer, but I do have a wonderful Ubuntu 10.04 ser
 
 Enter [this post](http://www.rho.cc/index.php/linux2/48-misc/104-printing-from-ipad-airprint-via-cups). Excellent! Set up a Bonjour service, point it to a shared printer, done!
 
-Here's what I had to do in Ubuntu  to get printing to work, YMMV:
+Here's what I had to do in Ubuntu to get printing to work, YMMV:
 
 * Install my printer (networked HP Color LaserJet 1515n) using the graphical configuration utility (System->Administration->Printing). Make sure the printer is shared.
 
@@ -104,12 +107,6 @@ Here's what I had to do in Ubuntu  to get printing to work, YMMV:
 
 * Done!
 
-I'm not sure if all printers will work out of the box with this configuration, but since my printer supports PostScript I assume it can rasterize pretty much anything iOS will send it. In any case, I didn't have to configure any filters or print settings. It just worked. Hopefully Apple won't further cripple AirPrinting by also "patching" iOS so that only HP ePrint devices are supported and it no longer recognizes Bonjour services with subtype `_universal._sub._ipp._tcp`. We'll see what happens!
+I'm not sure if all printers will work out of the box with this configuration, but since my printer supports PostScript I assume it can rasterize pretty much anything iOS will send it. In any case, I didn't have to configure any filters or print settings. It just worked. Hopefully Apple won't further cripple AirPrinting by also "patching" iOS so that only HP ePrint devices are supported and it no longer recognizes Bonjour services with subtype `_universal._sub._ipp._tcp`. We'll see what happens!
 
 Now all I need is an iPad. And a reason to print.
-
----
-
-*Updated 2010-11-21: repaired some mangled XML due to Wordpress's less-than-nice HTML-parsing*
-
-*Updated 2010-11-23: added post subtitle, added screenshot from iPhone*

@@ -12,6 +12,9 @@ tags:
   - TimeMachine
 title: Recover a failed TimeMachine backup
 url: /2013/01/08/recover-a-failed-timemachine-backup/
+updated:
+  '2013-07-06': updated fsck step to not be recursive, can try to run fsck multiple times, thanks to comments!
+
 ---
 
 
@@ -144,7 +147,3 @@ Enable TimeMachine and start the backups. When the backups first started, the "O
 
 ![Backing up](/images/2013/01/tm-4-backup.png)
 ![done!](/images/2013/01/tm-4-done.png)
-
----
-
-_Updated 2013-07-06: updated fsck step to not be recursive, can try to run fsck multiple times, thanks to comments!_

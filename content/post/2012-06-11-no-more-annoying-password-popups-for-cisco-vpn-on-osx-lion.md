@@ -8,6 +8,8 @@ id: 145
 permalink: /2012/06/11/no-more-annoying-password-popups-for-cisco-vpn-on-osx-lion/
 title: No more annoying password popups for Cisco VPN on OSX Lion (and Mountain Lion)!
 url: /2012/06/11/no-more-annoying-password-popups-for-cisco-vpn-on-osx-lion/
+updated:
+  '2012-08-07': added the detailed steps, tested on OSX Mountain Lion (10.8)
 ---
 
 
@@ -75,9 +77,3 @@ I hope this information helps you as it helped me!
     ```
 
 * Disconnect VPN and reconnect.
-
----
-
-_Updated 2012-08-07: added the detailed steps_
-
-_Updated 2012-08-07: tested on OSX Mountain Lion (10.8)_

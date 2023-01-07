@@ -13,6 +13,9 @@ tags:
   - retina
 title: Fix lagging display performance on retina MacBook Pro
 url: /2013/01/21/fix-lagging-display-performance-on-retina-macbook-pro/
+updated:
+  '2013-08-12': fixed typo in preference plist filename.
+
 ---
 
 
@@ -28,7 +31,3 @@ Scouring forums for answers led me [here](https://discussions.apple.com/message/
 * Startup, immediately press and hold the P and R keys while holding down the option (⌥) and command (⌘) keys before the gray boot screen appears, which [resets the PRAM](http://support.apple.com/kb/HT1379)
 * You may have to reset your display preferences (resolution) once you login
 * Done!
-
----
-
-_2013-08-12: fixed typo in preference plist filename._

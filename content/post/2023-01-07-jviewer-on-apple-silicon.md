@@ -12,20 +12,20 @@ title: JViewer on Apple Silicon
 url: /2023/01/07/jviewer-on-apple-silicon/
 ---
 
-My homelab server runs on a nice, oldish [Asrock Rack D1541D4U-2T8R](https://www.asrockrack.com/general/productdetail.asp?Model=D1541D4U-2T8R). Unfortunately, Asrock has not provided recent firmware updates for the motherboard and to access the remote KVM-capabilities of the BMC, the antiquated java-webstart-based JViewer software is still required. In contrast, Supermicro motherboards (ok, at least this one: [X10SDV-4C-TLN2F](https://www.supermicro.com/en/products/motherboard/x10sdv-4c-tln2f)) with the same Aspeed AST2400 BMC support remote KVM via a nice web-based GUI.
+My homelab server runs on a nice, oldish [Asrock Rack D1541D4U-2T8R](https://www.asrockrack.com/general/productdetail.asp?Model=D1541D4U-2T8R). Unfortunately, Asrock has not provided recent firmware updates for the motherboard and to access the remote KVM-capabilities of the BMC, the antiquated java-webstart-based JViewer software is still required. In contrast, Supermicro motherboards (ok, at least this one: [X10SDV-4C-TLN2F](https://www.supermicro.com/en/products/motherboard/x10sdv-4c-tln2f)) with the same Aspeed AST2400 BMC support remote KVM via a nice web-based GUI. It would be nice if Asrock also provided a web GUI, but alas, no. Their Java-based JViewer must be used.
 
 <!--more-->
 
-JViewer itself is not all bad: it works, it does what it needs to do. Unfortunately, when I bought my new M1-based Macbook Pro a year ago JViewer stopped working completely. I couldn't open it. Not good. What I found out is that JViewer (for my Asrock Rack motherboard) must have Java 8, not newer, and must be of type x64 architecture, not aarch64 (Apple Silicon). [Openwebstart](https://openwebstart.com/) is a great solution for executing jnlp files, but no matter what I tried, I couldn't _force_ JViewer to use the JVM it needed, even when removing all other JVM configurations and only having a Rosetta-based x64-based JVM configured:
+JViewer itself is not all bad: it works, it does what it needs to do. Unfortunately, when I bought my new M1-based Macbook Pro a year ago JViewer stopped working completely. I couldn't open it. Not good. What I found out is that JViewer (for my Asrock Rack motherboard) must have Java 8, not newer, and must be of type x64 architecture, not aarch64 (Apple Silicon). [Openwebstart](https://openwebstart.com/) is a great solution for executing jnlp files, but no matter whatc configuration tweaks I tried in Openwebstart, I couldn't _force_ JViewer to use the JVM it needed, even when removing all other JVM configurations and only having a Rosetta-based x64-based JVM configured:
 
 ![Openwebstart failing to open JViewer, even with a x64 Java 8 JVM](/images/2023/01/jviewer-fail.png)
 
 
 ## jviewer-starter
 
-Tl;DR: [Use my modified jviewer-starter to simplify starting JViewer on your ASRock Rack D1541D4U-2T8R](https://github.com/dfuchslin/jviewer-starter)
+TL;DR: [Use my modified jviewer-starter to simplify starting JViewer on your ASRock Rack D1541D4U-2T8R](https://github.com/dfuchslin/jviewer-starter)
 
-Scouring the internet led me to this great script: [jviewer-starter.py](https://github.com/arbu/jviewer-starter/blob/master/jviewer-starter.py). Instead of manually logging into the webportal of the server's BMC, downloading the jnlp, double-clicking, accepting the security warning, then clicking another security warning or two, the script simplifies this. In very general and nonspecific terms, a jnlp (java webstart) file contains the server path(s) to the class/jar files for the application as well as the arguments. If you were to download the specified files you could manually instantiate the java application from the command line, such as `java -cp path/to/downloaded/jars main.class.FileName arg1 arg2`. You can skip jnlp and all the hassle around "Java Web Start" completely. This is what the jviewer-starter script does.
+Scouring the internet led me to this great script: [jviewer-starter.py](https://github.com/arbu/jviewer-starter/blob/master/jviewer-starter.py). Instead of manually logging into the webportal of the server's BMC, downloading the jnlp, double-clicking, accepting the security warning, then clicking another security warning or two, the script simplifies this. In very general and nonspecific terms, a jnlp (Java Web Start) file contains the server path(s) to the class/jar files for the application as well as the arguments. If you were to download the specified files you could manually instantiate the Java application from the command line, such as `java -cp path/to/downloaded/jars main.class.FileName arg1 arg2`. You can skip jnlp and all the hassle around "Java Web Start" completely. This is what the jviewer-starter script does.
 
 ## Java + Rosetta
 
@@ -59,7 +59,8 @@ Password: **************
 
 I assume Rosetta won't be around forever, so I also encapsulated the script within a x64-based docker container that exposes the Java Swing GUI components (is it still called Swing these days??) by pointing the `DISPLAY` variable to the docker host within the running container. This requires X-Quartz to be installed on MacOS, and I also found out there is a [strange rendering bug specific to Java GUI applications](https://github.com/XQuartz/XQuartz/issues/31) in XQuartz 2.8.2+ (apparently still not fixed?). This can be remedied by appling some arguments to `JAVA_OPTIONS`, which I applied in the docker startup script.
 
-Using the docker container means I'm not dependent upon having a specific java installed on the host machine. Nice!
+Using the docker container means I'm not dependent upon having a specific Java installed on the host machine. Nice! And nice to have options!
+
 
 # All the code
 

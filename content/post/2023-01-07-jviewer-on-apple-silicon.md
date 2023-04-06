@@ -12,7 +12,7 @@ title: JViewer on Apple Silicon
 url: /2023/01/07/jviewer-on-apple-silicon/
 ---
 
-My homelab server runs on a nice, oldish [Asrock Rack D1541D4U-2T8R](https://www.asrockrack.com/general/productdetail.asp?Model=D1541D4U-2T8R). Unfortunately, Asrock has not provided recent firmware updates for the motherboard and to access the remote KVM-capabilities of the BMC, the antiquated java-webstart-based JViewer software is still required. In contrast, Supermicro motherboards (ok, at least this one: [X10SDV-4C-TLN2F](https://www.supermicro.com/en/products/motherboard/x10sdv-4c-tln2f)) with the same Aspeed AST2400 BMC support remote KVM via a nice web-based GUI. It would be nice if Asrock also provided a web GUI, but alas, no. Their Java-based JViewer must be used.
+My homelab server runs on a nice, oldish [Asrock Rack D1541D4U-2T8R](https://www.asrockrack.com/general/productdetail.asp?Model=D1541D4U-2T8R). Unfortunately, Asrock has not provided recent firmware updates for the motherboard and to access the remote KVM/Console Redirection-capabilities of the BMC, the antiquated java-webstart-based JViewer software is still required. In contrast, Supermicro motherboards (ok, at least this one: [X10SDV-4C-TLN2F](https://www.supermicro.com/en/products/motherboard/x10sdv-4c-tln2f)) with the same Aspeed AST2400 BMC support remote KVM via a nice web-based GUI. It would be nice if Asrock also provided a web GUI for simplicity, but alas, no. Their Java-based JViewer must be used.
 
 <!--more-->
 
@@ -41,7 +41,7 @@ Then I set `JVIEWER_JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8-x64.jdk` 
 
 ## Running it
 
-After symlinking to `/usr/bin/local` (which is in my `$PATH`), I can now access jviewer very easy now, skipping Openwebstart completely.
+After symlinking to `/usr/bin/local` (which is in my `PATH`), I can now access JViewer very easily now, skipping Openwebstart completely.
 ```bash
 ❯ jviewer-starter --host <server_ipmi_ip> --username <username> --password <password>
 
